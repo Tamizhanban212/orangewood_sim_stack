@@ -1,0 +1,146 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="Rangoli">
+    <static>true</static>
+
+    <!-- Outer circle (Base layer) -->
+    <link name="outer_circle">
+      <visual name="visual">
+        <geometry>
+          <cylinder>
+            <radius>0.15</radius> <!-- Diameter = 300mm -->
+            <length>0.001</length> <!-- 1mm thickness -->
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.5 0.5 0.5 1</ambient> <!-- Gray color -->
+          <diffuse>0.5 0.5 0.5 1</diffuse>
+        </material>
+      </visual>
+    </link>
+
+    
+
+    <!-- 6 smaller circles around the inner circle -->
+    <!-- These circles are placed on the circumference of the inner circle -->
+    <!-- Green Circles -->
+    <link name="small_circle_1">
+      <pose>0.075 0 0.0015 0 0 0</pose> <!-- Adjusted for placement -->
+      <visual name="visual">
+        <geometry>
+          <cylinder>
+            <radius>0.075</radius> <!-- Diameter = 150mm -->
+            <length>0.0005</length> <!-- 0.5mm extrusion -->
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0 0.5 0 1</ambient> <!-- Green color -->
+          <diffuse>0 0.5 0 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    
+    <!-- Similarly, repeat for the other 5 circles, with appropriate positions -->
+    
+    <link name="small_circle_2">
+      <pose>0.0375 0.065 0.0015 0 0 0</pose> <!-- Adjusted for placement -->
+      <visual name="visual">
+        <geometry>
+          <cylinder>
+            <radius>0.075</radius> <!-- Diameter = 150mm -->
+            <length>0.0005</length> <!-- 0.5mm extrusion -->
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0 0.5 0 1</ambient> <!-- Green color -->
+          <diffuse>0 0.5 0 1</diffuse>
+        </material>
+      </visual>
+    </link>
+
+    <link name="small_circle_3">
+      <pose>-0.0375 0.065 0.0015 0 0 0</pose> <!-- Adjusted for placement -->
+      <visual name="visual">
+        <geometry>
+          <cylinder>
+            <radius>0.075</radius> <!-- Diameter = 150mm -->
+            <length>0.0005</length> <!-- 0.5mm extrusion -->
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0 0.5 0 1</ambient> <!-- Green color -->
+          <diffuse>0 0.5 0 1</diffuse>
+        </material>
+      </visual>
+    </link>
+
+    <link name="small_circle_4">
+      <pose>-0.075 0 0.0015 0 0 0</pose> <!-- Adjusted for placement -->
+      <visual name="visual">
+        <geometry>
+          <cylinder>
+            <radius>0.075</radius> <!-- Diameter = 150mm -->
+            <length>0.0005</length> <!-- 0.5mm extrusion -->
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0 0.5 0 1</ambient> <!-- Green color -->
+          <diffuse>0 0.5 0 1</diffuse>
+        </material>
+      </visual>
+    </link>
+
+    <link name="small_circle_5">
+      <pose>-0.0375 -0.065 0.0015 0 0 0</pose> <!-- Adjusted for placement -->
+      <visual name="visual">
+        <geometry>
+          <cylinder>
+            <radius>0.075</radius> <!-- Diameter = 150mm -->
+            <length>0.0005</length> <!-- 0.5mm extrusion -->
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0 0.5 0 1</ambient> <!-- Green color -->
+          <diffuse>0 0.5 0 1</diffuse>
+        </material>
+      </visual>
+    </link>
+
+    <link name="small_circle_6">
+      <pose>0.0375 -0.065 0.0015 0 0 0</pose> <!-- Adjusted for placement -->
+      <visual name="visual">
+        <geometry>
+          <cylinder>
+            <radius>0.075</radius> <!-- Diameter = 150mm -->
+            <length>0.0005</length> <!-- 0.5mm extrusion -->
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0 0.5 0 1</ambient> <!-- Green color -->
+          <diffuse>0 0.5 0 1</diffuse>
+        </material>
+      </visual>
+    </link>
+
+    <link name="inner_circle">
+      <pose>0 0 0.0025 0 0 0</pose> <!-- Placed 2.5 mm above the base (1mm base + 0.5mm small circles + 1mm additional clearance) -->
+      <visual name="visual">
+        <geometry>
+          <cylinder>
+            <radius>0.075</radius> <!-- Diameter = 150mm -->
+            <length>0.0005</length> <!-- 0.5mm extrusion -->
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0 0 0.5 1</ambient> <!-- Blue color -->
+          <diffuse>0 0 0.5 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    
+    <!-- Add the middle flower-like structure with appropriate poses and colors -->
+
+    <!-- Other decorative shapes can be added similarly with additional <link> elements -->
+
+  </model>
+</sdf>
